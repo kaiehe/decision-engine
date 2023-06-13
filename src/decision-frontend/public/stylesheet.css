@@ -1,0 +1,47 @@
+body {
+    background-color: #EEE5E9;
+    font-family: "Roboto Light", sans-serif;
+}
+
+.masthead {
+    height: 20vh;
+    min-height: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 40%;
+}
+
+h1 {
+    color: #6B818C
+}
+
+table, th, td {
+    border: 1px slategray;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: center;
+    padding: 15px;
+}
+
+p.test {
+    color: azure
+}
+
+button {
+    display: inline-block;
+    background-color: oldlace;
+    height: 40px;
+    width: 186px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: black;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 16px;
+    border: none;
+}

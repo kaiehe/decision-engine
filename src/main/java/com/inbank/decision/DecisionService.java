@@ -20,7 +20,7 @@ public class DecisionService {
         return decisionRepository.getClientCreditModifier(identityCode);
     }
 
-    public double getCreditScore(int creditModifier, double inputAmount, int inputPeriod) {
+    public static double getCreditScore(int creditModifier, double inputAmount, int inputPeriod) {
         return (creditModifier / inputAmount) * inputPeriod;
     }
 

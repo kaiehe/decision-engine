@@ -14,7 +14,6 @@ public class LoanUtils {
     private static final int minPeriod = 12;
     private static final int maxPeriod = 60;
 
-    //siin oleks ideaalne tegelikult koos currencyga tagastada
     public static double maxPossibleLoanAmount(int creditModifier, int inputPeriod) {
         var maxLoan = creditModifier * inputPeriod;
         if (maxLoan < minAmount) {

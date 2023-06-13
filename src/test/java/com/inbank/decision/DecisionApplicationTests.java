@@ -11,14 +11,11 @@ class DecisionApplicationTests {
     @Autowired
     DecisionRepository decisionRepository;
 
-    @Autowired
-    DecisionService decisionService;
-
     @Test
     @DisplayName("Check credit score calculation")
     void whenRequestCreditModifier_returnPositiveCreditScoreForSelectedPerson() {
         var creditModifier = decisionRepository.getClientCreditModifier("49002010976");
-        var creditScore = decisionService.getCreditScore(creditModifier, 3000, 12);
+        var creditScore = DecisionService.getCreditScore(creditModifier, 3000, 12);
         Assertions.assertEquals(creditScore, 0.4);
         Assertions.assertInstanceOf(Double.class, creditScore);
     }
@@ -27,7 +24,7 @@ class DecisionApplicationTests {
     @DisplayName("Check no response when person with debt category")
     void whenRequestCreditModifierForDebt_returnNull() {
         var creditModifier = decisionRepository.getClientCreditModifier("49002010965");
-        var creditScore = decisionService.getCreditScore(creditModifier, 3000, 12);
+        var creditScore = DecisionService.getCreditScore(creditModifier, 3000, 12);
         Assertions.assertEquals(creditScore, 0.0);
     }
 
