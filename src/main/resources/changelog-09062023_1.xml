@@ -1,0 +1,39 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
+                   http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--Added initial schema and fields-->
+    <changeSet id="09062023_1" author="KaieP">
+        <createTable tableName="credit_score">
+            <column name="identity_code" type="varchar(30)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="segment" type="varchar(100)"/>
+            <column name="credit_modifier" type="int"/>
+        </createTable>
+
+        <insert tableName="credit_score">
+            <column name="identity_code" value="49002010965"/>
+            <column name="segment" value="debt"/>
+            <column name="credit_modifier" value="0"/>
+        </insert>
+        <insert tableName="credit_score">
+            <column name="identity_code" value="49002010976"/>
+            <column name="segment" value="1"/>
+            <column name="credit_modifier" value="100"/>
+        </insert>
+        <insert tableName="credit_score">
+            <column name="identity_code" value="49002010987"/>
+            <column name="segment" value="2"/>
+            <column name="credit_modifier" value="300"/>
+        </insert>
+        <insert tableName="credit_score">
+            <column name="identity_code" value="49002010998"/>
+            <column name="segment" value="3"/>
+            <column name="credit_modifier" value="1000"/>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>
