@@ -29,6 +29,6 @@ dependencies {
 	compileOnly('org.junit.jupiter:junit-jupiter:5.9.2')
 }
 
-test {
+tasks.named('test') {
 	useJUnitPlatform()
 }
